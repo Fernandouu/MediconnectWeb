@@ -1,0 +1,25 @@
+body {
+    background-color: #C8D9E6;
+}
+
+.contenedorPrincipal {
+    min-height: 100dvh;
+    background: url(../assets/backgroundMediconnect.png) no-repeat center bottom;
+    background-size: 100% 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; 
+}
+
+.Formulario {
+    height: 50dvh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    color: white;
+    border-radius: 10px;
+    padding: 2rem;
+}
