@@ -13,8 +13,8 @@ body {
 }
 
 .RegistroForm {
-    height: 90dvh;
-    width: 75dvh;
+    height: 70dvh;
+    width: 70dvh;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -31,8 +31,6 @@ body {
 
 .textBienvenida {
     font-family: "Poppins", sans-serif;
-    margin-top: 5%;
-    margin-left: 5%;
 }
 
 .textBienvenida h3 {
@@ -50,7 +48,6 @@ body {
 }
 
 .form {
-    margin-top: 1.5rem;
     width:85%;
 }
 
