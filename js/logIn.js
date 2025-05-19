@@ -25,7 +25,7 @@ async function logIn(){
         // Si la respuesta es exitosa, se procesa la respuesta
         const data = await response.json();
         console.log("Inicio de sesión exitoso:", data); 
-        sessionStorage.setItem("token", data.token); // Guardar el token en sessionStorage
+        sessionStorage.setItem("token", data.token); //Guardar el token para usarlo en otras peticiones y etc.
 
     } catch (error) {
         console.error("Error al iniciar sesión", error);

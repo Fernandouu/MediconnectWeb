@@ -1,0 +1,36 @@
+body {
+    background-color: #C8D9E6;
+}
+
+.dashAdmin {
+    height: 100dvh;
+    background: linear-gradient(to bottom,
+            #567C8D 0%,
+            #42606D 57%,
+            #38515D 69%,
+            #182227 100%);
+}
+
+.logoMediconnectImage {
+    width: 40%;
+    margin-top: 14dvh;
+}
+
+.secciones {
+    margin-bottom: 10vh;
+}
+
+.secciones p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: clamp(0.9375rem, 0.8125rem + 0.625vw, 1.5625rem);
+    color: #f8f8f8;
+    transition: all 0.3s ease;
+    margin-top: 3dvh;
+}
+
+.secciones p:hover {
+    cursor: pointer;
+    color: #f8f8f8;
+    text-decoration: underline;
+}
