@@ -1,0 +1,119 @@
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #2F4156;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contenedorPrincipal {
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+        }
+
+        .RegistroForm {
+            background-color: #f5efeb;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .logoForm {
+            margin-bottom: 20px;
+        }
+
+        .logoFormImage {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .textBienvenida .parrafoForm {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: black;
+            margin-bottom: 5px;
+        }
+
+        .textBienvenida .parrafoFormSub {
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        .inputForm {
+            font-size: 1rem;
+            padding: 0.75rem 0;
+        }
+
+        .input-group-text {
+            color: #567C8D; /* Match button color */
+            background-color: transparent;
+            border: none;
+        }
+
+        .form-control::placeholder {
+            color: black;
+        }
+
+        .btnIniciarSesion {
+            background-color: #567C8D;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btnIniciarSesion:hover {
+            background-color: #567c8d;
+        }
+
+        .link-primary {
+            color: #007bff !important;
+            text-decoration: none;
+        }
+
+        .link-primary:hover {
+            text-decoration: underline;
+        }
+
+        /* Style the input groups to align items to the start */
+        .Formulario .input-group {
+            display: flex;
+            align-items: center; /* Vertically align icon and input */
+            margin-bottom: 1.5rem; /* Adjust spacing between input groups */
+            border-bottom: 1px solid #ced4da; /* Add the border back */
+        }
+
+        .Formulario .input-group .input-group-text {
+            padding-left: 0; /* Remove default left padding */
+            padding-right: 0.75rem; /* Add some spacing between icon and input */
+            width: auto; /* Adjust width to content */
+        }
+
+        .Formulario .input-group .form-control {
+            border: none;
+            background-color: transparent;
+            padding-left: 0; /* Remove default left padding */
+        }
+
+        .divBtn {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Media Queries (You might have more in mediaquery.css) */
+        @media (max-width: 768px) {
+            .contenedorPrincipal {
+                padding: 20px;
+            }
+
+            .Formulario {
+                margin-left: 0 !important;
+            }
+        }
