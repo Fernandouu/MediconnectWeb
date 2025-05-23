@@ -19,6 +19,7 @@
 
 .header-items-wrapper{
     display: flex;
+    justify-content: end;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -41,7 +42,7 @@
 }
 
 .main-container-header{
-    color: #2F4156;
+    color: #1E1E1E;
 }
 
 .container-cards{
