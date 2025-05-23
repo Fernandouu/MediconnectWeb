@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Formulario de Registro -->
+    <form id="first" hidden>
+        <h2>Registro</h2>
+        <input type="text" name="name" id="name" placeholder="Nombre completo"><br><br>
+        <input type="email" name="email" id="email" placeholder="Correo electrónico"><br><br>
+        <input type="password" name="password" id="password" placeholder="Contraseña"><br><br>
+        <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirmar contraseña">
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Formulario de Login -->
+    <form id="login" hidden>
+        <h2>Iniciar sesión</h2>
+        <input type="email" name="email" id="login_email" placeholder="Correo electrónico"><br><br>
+        <input type="password" name="password" id="login_password" placeholder="Contraseña">
+        <button type="submit">Submit</button>
+        <a href="signup.html">SignUp</a>
+    </form>
+</body>
+<script src="../utils/request.js"></script>
+<script src="../controllers/index.js"></script>
+</html>
