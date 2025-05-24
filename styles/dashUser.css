@@ -49,12 +49,33 @@
     display: flex;
 }
 
-.main-container-cards{
+.main-container-cards {
     color: white;
     background: linear-gradient(to bottom, #567C8D, #33505c, #213944);
     padding: 18px;
     margin: 10px;
-    border: 1px;
-    border-style: none;
+    border: none;
     border-radius: 5%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-container-cards p {
+    white-space: pre-line;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+    margin: 8px 0;
+    max-height: 100px; 
+    overflow-y: auto; 
+}
+
+#container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+    padding: 15px;
 }

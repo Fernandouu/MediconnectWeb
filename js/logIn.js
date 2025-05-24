@@ -25,6 +25,7 @@ async function logInUsuarios() {
         // Guardar token y usuario
         sessionStorage.setItem("token", data.token);
         sessionStorage.setItem("user", JSON.stringify(data.user));
+        sessionStorage.setItem("id", data.user.id);
 
 
         // Redirigir según tipo de usuario
@@ -36,7 +37,7 @@ async function logInUsuarios() {
                 window.location.href = "dashDoctor.html";
                 break;
             case 'patient':
-                window.location.href = "dashUser.html";
+                window.location.href = "dashUserExamenes.html";
                 break;
             default:
                 alert("Tipo de usuario desconocido");
