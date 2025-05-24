@@ -54,3 +54,7 @@ th,td{
     border-style: solid;
     border-color: #283849;
 }
+
+.modal-header{
+    background-color: #283849;
+}

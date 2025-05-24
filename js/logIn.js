@@ -30,10 +30,10 @@ async function logInUsuarios() {
         // Redirigir según tipo de usuario
         switch (data.user.type) {
             case 'admin':
-                window.location.href = "dashDoctor.html";
+                window.location.href = "dashAdmin.html";
                 break;
             case 'doctor':
-                window.location.href = "dashAdminPaciente.html";
+                window.location.href = "dashDoctor.html";
                 break;
             case 'patient':
                 window.location.href = "dashUser.html";
