@@ -36,14 +36,14 @@
                         </div>
                         <div
                             class="col-12 col-lg-12 Formulario d-flex justify-content-lg-start justify-content-center ms-5">
-                            <form class="form mt-3 ">
+                            <form class="form mt-3 " id="loginForm">
                                 <!-- Correo -->
                                 <div class="input-group mb-4 border-bottom">
                                     <span class="input-group-text bg-transparent border-0">
                                         <i class="bi bi-envelope-fill"></i>
                                     </span>
                                     <input type="email" class="form-control border-0 bg-transparent inputForm"
-                                        placeholder="Correo" id="email">
+                                        placeholder="Correo" name="email" id="login_email">
                                 </div>
                                 <!-- Contraseña -->
                                 <div class="input-group mb-4 border-bottom">
@@ -51,14 +51,14 @@
                                         <i class="bi bi-lock-fill"></i>
                                     </span>
                                     <input type="password" class="form-control border-0 bg-transparent inputForm"
-                                        placeholder="Contraseña" id="password">
+                                        placeholder="Contraseña" name="password" id="login_password">
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 <div class="divBtn d-flex justify-content-center">
-                    <button type="button" class="btn btn-md btnRegistrarse mt-5" onclick=logIn()>Iniciar sesión</button>
+                    <button type="button" class="btn btn-md btnRegistrarse mt-5" onclick=logInUsuarios()>Iniciar sesión</button>
                 </div>
             </div>
         </div>
