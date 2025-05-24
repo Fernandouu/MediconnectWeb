@@ -48,3 +48,9 @@ th,td{
     text-align: left;
     padding: 20px 60px 10px 0px;
 }
+
+.info-holder{
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: #283849;
+}
