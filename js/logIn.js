@@ -26,6 +26,7 @@ async function logInUsuarios() {
         sessionStorage.setItem("token", data.token);
         sessionStorage.setItem("user", JSON.stringify(data.user));
 
+
         // Redirigir según tipo de usuario
         switch (data.user.type) {
             case 'admin':
