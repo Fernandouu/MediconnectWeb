@@ -19,8 +19,8 @@ Para acceder a ella necesita tener instalado lo siguiente:
 
 ## Herramietas de Mediconnect
 
-- **Archivo de Exámenes**
-- **Doctores** con los que se atiende
+- Archivo de **Exámenes**
+- Visualización de **Doctores** con los que se atiende
 
 ---
 
