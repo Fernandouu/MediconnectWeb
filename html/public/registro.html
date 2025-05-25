@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/public/registro.css">
+    <title>MC - Registro</title>
+    <link rel="icon" type="image/x-icon" href="../../../assets/Logo.png">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="../../assets/logonegro.png" alt="">
+        </div>
+        <h2>Registro</h2>
+        <form id="paciente-reg">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombres">
+            <input type="text" id="apellido" name="apellido" placeholder="Apellidos">
+            <input type="email" id="email" name="email" placeholder="Correo electrónico">
+            <input type="password" id="password" name="password" placeholder="Contraseña">
+            <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirmar contraseña">
+            <div class="button-cont">
+                <button onclick="window.location.href='index.html'" type="button" id="login-red">Iniciar Sesión</button>
+                <button id="submit" type="submit">Registrarse</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="../../js/public/utils.js"></script>
+<script src="../../js/public/registro.js"></script>
+</html>

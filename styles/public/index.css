@@ -1,0 +1,19 @@
+#reg-red{
+    background-color: #48B5AC;
+    color: #9CFFF7;
+}
+#reg-red:hover{
+    background-color: #009c8f;
+    color: white;
+    box-shadow: 0 0 20px #009c8f;
+}
+
+#submit{
+    background-color: #9CFFF7;
+    color: #48B5AC;
+}
+#submit:hover{
+    background-color: #6cfff3;
+    color: white;
+    box-shadow: 0 0 20px #6cfff3;
+}
