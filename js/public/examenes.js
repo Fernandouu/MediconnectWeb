@@ -1,12 +1,12 @@
 const contenedorExamenes = document.getElementById("container-cards");;
-const user = JSON.parse(sessionStorage.getItem("user"));
+// const user = JSON.parse(sessionStorage.getItem("user"));
 
 
 async function fetchExamenes() {
     try {
         
-        const idPaciente = user.paciente_id;
-        const response = await fetch(`http://127.0.0.1:8000/api/pacientes/${idPaciente}/examenes`);
+        const idPaciente = localStorage.getItem('pacienteId');
+        const response = await fetch(`http://127.0.0.1:8000/api/pacientes/"${idPaciente}"/examenes`);
         if (!response.ok) {
             throw new Error('Error al obtener los exámenes');
         }
