@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/public/registro.css">
+    <link rel="stylesheet" href="../../styles/public/index.css">
     <title>MC - Registro</title>
     <link rel="icon" type="image/x-icon" href="../../../assets/Logo.png">
 </head>
@@ -12,20 +13,17 @@
         <div class="logo">
             <img src="../../assets/logonegro.png" alt="">
         </div>
-        <h2>Registro</h2>
+        <h2>Inicio de Sesión</h2>
         <form id="paciente-login">
-            <input type="text" id="nombre" name="nombre" placeholder="Nombres">
-            <input type="text" id="apellido" name="apellido" placeholder="Apellidos">
             <input type="email" id="email" name="email" placeholder="Correo electrónico">
             <input type="password" id="password" name="password" placeholder="Contraseña">
-            <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirmar contraseña">
             <div class="button-cont">
-                <button id="login-red">Iniciar Sesión</button>
-                <button id="submit" type="submit">Registrarse</button>
+                <button onclick="window.location.href='registro.html'" type="button" id="reg-red">Registrarse</button>
+                <button id="submit" type="submit">Iniciar Sesión</button>
             </div>
         </form>
     </div>
 </body>
 <script src="../../js/public/utils.js"></script>
-<script src="../../js/public/registro.js"></script>
+<script src="../../js/public/index.js"></script>
 </html>
