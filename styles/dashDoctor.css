@@ -58,3 +58,7 @@ th,td{
 .modal-header{
     background-color: #283849;
 }
+
+.form-label{
+    color: #283849;
+}
