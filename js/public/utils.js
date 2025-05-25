@@ -23,21 +23,11 @@ const fetchData = async (filename, method = 'GET', body = null) => {
         const PATH = new URL(SERVER_URL + filename);
         const RESPONSE = await fetch(PATH.href, OPTIONS);
 
-        if (!RESPONSE.ok) {
-            console.error(`Error HTTP: ${RESPONSE.status} ${RESPONSE.statusText}`);
-            return null;
-        }
-
-        const contentType = RESPONSE.headers.get('content-type');
-        if (contentType && contentType.includes('application/json')) {
-            return await RESPONSE.json();
-        } else {
-            console.warn('Respuesta no JSON:', await RESPONSE.text());
-            return null;
-        }
+        // Devuelve la respuesta completa, incluso si hay errores HTTP (4xx, 5xx)
+        return RESPONSE;
     } catch (error) {
         console.error('Error en la petición:', error);
-        return null;
+        throw error; // Propaga el error para que el código del formulario lo maneje
     }
 };
 
