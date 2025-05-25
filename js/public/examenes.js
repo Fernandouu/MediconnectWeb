@@ -6,7 +6,7 @@ async function fetchExamenes() {
     try {
         
         const idPaciente = localStorage.getItem('pacienteId');
-        const response = await fetch(`http://127.0.0.1:8000/api/pacientes/"${idPaciente}"/examenes`);
+        const response = await fetch(`http://127.0.0.1:8000/api/pacientes/${idPaciente}/examenes`);
         if (!response.ok) {
             throw new Error('Error al obtener los exámenes');
         }
