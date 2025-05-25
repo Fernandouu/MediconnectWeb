@@ -23,11 +23,21 @@ const fetchData = async (filename, method = 'GET', body = null) => {
         const PATH = new URL(SERVER_URL + filename);
         const RESPONSE = await fetch(PATH.href, OPTIONS);
 
-        // Devuelve la respuesta completa, incluso si hay errores HTTP (4xx, 5xx)
         return RESPONSE;
     } catch (error) {
         console.error('Error en la petición:', error);
-        throw error; // Propaga el error para que el código del formulario lo maneje
+        throw error;
     }
 };
+
+function logout() {
+    // Eliminar todos los items del localStorage
+    localStorage.clear();
+    
+    // Redirigir a la página de inicio
+    window.location.href = "index.html";
+    
+    // Opcional: Prevenir cualquier acción adicional
+    return false;
+}
 

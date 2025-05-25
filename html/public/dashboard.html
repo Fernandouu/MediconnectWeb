@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/public/dashboard.css">
+    <link rel="stylesheet" href="../../styles/public/navbar.css">
+    <title>MC - Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="../../../assets/Logo.png">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="../../assets/Logo.png" alt="Mediconnect" width="80" height="80">
+        </div>
+
+        <div class="nav-options">
+            <a onclick="logout()">Cerrar Sesión</a>
+            <a href="doctores.html">Doctores</a>
+            <a href="examenes.html">Examenes</a>
+            <a href="dashboard.html" class="selected">Menu</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="perfil">
+            <img src="../../assets/perfil.jpg" alt="Foto de perfil">
+    
+            <div class="content-box">
+                <div class="content">
+                    <span class="label">Nombre</span>
+                    <span id="nombre-data" class="value"></span>
+                </div>
+                <div class="content">
+                    <span class="label">Apellido</span>
+                    <span id="apellido-data" class="value"></span>
+                </div>
+                <div class="content">
+                    <span class="label">Correo</span>
+                    <span id="correo-data" class="value"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="edit-perfil">
+            <form id="editProfileForm" class="profile-form">
+                <h2>Editar Perfil</h2>
+                
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Nueva Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-save">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+</body>
+<script src="../../js/public/utils.js"></script>
+<script src="../../js/public/dashboard.js"></script>
+</html>

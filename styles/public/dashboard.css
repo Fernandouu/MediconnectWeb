@@ -1,0 +1,57 @@
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+
+    .perfil {
+        width: 80%;
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        img {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .content-box {
+            margin-top: 20px;
+            width: 60%;
+            border-radius: 12px;
+            padding: 20px;
+
+            .content {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 0;
+                border-bottom: 1px solid #ddd;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .label {
+                    font-weight: bold;
+                    color: #333;
+                }
+
+                .value {
+                    color: #555;
+                }
+            }
+        }
+    }
+
+
+
+
+    
+}

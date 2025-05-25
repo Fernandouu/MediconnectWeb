@@ -11,7 +11,6 @@ REGISTRO.addEventListener('submit', async (event) => {
     const formData = new FormData(REGISTRO);
 
     try {
-        // 1. Registrar al paciente
         const registerResponse = await fetchData('signup/patient', 'POST', formData);
         
         if (!registerResponse.ok) {
@@ -27,30 +26,24 @@ REGISTRO.addEventListener('submit', async (event) => {
             throw new Error(errorMessage);
         }
 
-        // 2. Obtener credenciales del formulario
         const email = formData.get('email');
         const password = formData.get('password');
         
-        // 3. Hacer login automático
         const loginResponse = await fetchData('login', 'POST', new FormData(REGISTRO));
         
         if (!loginResponse.ok) {
             throw new Error('Registro exitoso, pero falló el auto-login');
         }
 
-        // 4. Procesar respuesta del login
         const loginData = await loginResponse.json();
         
-        // Verificar que sea paciente (opcional)
         if (loginData.user?.type !== 'patient') {
             localStorage.removeItem('authToken');
             throw new Error('Solo pacientes pueden iniciar sesión aquí');
         }
 
-        // 5. Guardar token y datos
         localStorage.setItem('authToken', loginData.token);
-        localStorage.setItem('user', JSON.stringify(loginData.user));
-        localStorage.setItem('userEmail', loginData.get('email'));
+        localStorage.setItem('pacienteId', loginData.user.paciente_id);
         
         alert('¡Registro y sesión iniciada con éxito!');
         window.location.href = "dashboard.html";

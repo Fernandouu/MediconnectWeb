@@ -26,19 +26,15 @@ LOGIN.addEventListener('submit', async (event) => {
             throw new Error(errorMessage);
         }
 
-        // Procesar respuesta exitosa
         const successData = await response.json();
 
-        // Verificar que el tipo de usuario sea "patient"
         if (successData.user?.type !== 'patient') {
             localStorage.removeItem('authToken');
             throw new Error('Login solo para pacientes');
         }
 
-        // Guardar datos en localStorage (CORRECCIÓN AQUÍ)
         localStorage.setItem('authToken', successData.token);
-        localStorage.setItem('user', JSON.stringify(successData.user)); // Usar successData en lugar de loginData
-        localStorage.setItem('userEmail', formData.get('email'));
+        localStorage.setItem('pacienteId', successData.user.paciente_id);
 
         alert(successData.message);
         window.location.href = "dashboard.html";
