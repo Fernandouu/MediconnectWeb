@@ -35,7 +35,7 @@ function abrirModal(pacienteId) {
     modal.show();
 }
 
-// Función para guardar el examen (modificada)
+// Función para guardar el examen 
 function saveExam() {
     const formData = {
         titulo: document.getElementById('examTitle').value,
