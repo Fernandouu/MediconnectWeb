@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('http://127.0.0.1:8000/api/paciente')  // Asegúrate que esta ruta esté correcta en tus rutas Laravel
+    fetch('http://127.0.0.1:8000/api/paciente')  
         .then(response => response.json())
         .then(data => {
             const tabla = document.getElementById('tabla-pacientes');
@@ -56,17 +56,17 @@ function saveExam() {
         },
         body: JSON.stringify(formData)
     })
-    .then(response => {
-        if (!response.ok) throw new Error('Error del servidor');
-        return response.json();
-    })
-    .then(data => {
-        alert('Examen guardado!');
-        bootstrap.Modal.getInstance(document.getElementById('examModal')).hide();
-        document.getElementById('examForm').reset();
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert(error.message || 'Error al guardar');
-    });
+        .then(response => {
+            if (!response.ok) throw new Error('Error del servidor');
+            return response.json();
+        })
+        .then(data => {
+            alert('Examen guardado!');
+            bootstrap.Modal.getInstance(document.getElementById('examModal')).hide();
+            document.getElementById('examForm').reset();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert(error.message || 'Error al guardar');
+        });
 }
