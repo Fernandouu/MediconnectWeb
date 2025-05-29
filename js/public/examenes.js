@@ -25,6 +25,7 @@ async function fetchExamenes() {
                 <br>
                 <p>${examen.titulo || 'Sin titulo disponible.'}</p>
                 <p>${examen.descripcion || 'Sin descripción disponible.'}</p>
+
             `;
             contenedor.appendChild(card);
         });
@@ -38,6 +39,12 @@ async function fetchExamenes() {
 function formatearFecha(fecha) {
     const [y, m, d] = fecha.split('-');
     return `${d}/${m}/${y.slice(2)}`;
+}
+
+function abrirReporte() {
+
+    const url = "http://127.0.0.1:8000/api/reporte/examenes";
+    window.open(url, "_blank");
 }
 
 

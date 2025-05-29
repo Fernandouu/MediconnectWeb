@@ -73,9 +73,5 @@ function saveExam() {
             bootstrap.Modal.getInstance(document.getElementById('examModal')).hide();
             document.getElementById('examForm').reset();
         })
-        .catch(error => {
-            console.error('Error:', error);
-            alert(error.message || 'Error al guardar');
-        });
 }
 
