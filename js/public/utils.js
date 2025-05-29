@@ -39,5 +39,19 @@ function logout() {
     
     // Opcional: Prevenir cualquier acción adicional
     return false;
+
+    
 }
+
+function logoutAdminDoctor() {
+    // Eliminar todos los items del localStorage
+    localStorage.clear();
+    
+    // Redirigir a la página de inicio
+    window.location.href = "logInAdmin.html";
+    
+    // Opcional: Prevenir cualquier acción adicional
+    return false;
+}
+
 

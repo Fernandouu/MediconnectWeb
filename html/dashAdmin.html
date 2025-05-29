@@ -28,6 +28,7 @@
                 <div class="sidebar-sections-user">
                     <span id="UserName">Doctor</span>
                     <p>Administrador</p>
+                    <a onclick="logoutAdminDoctor()">Cerrar Sesión</a>
                 </div>
             </div>
         </div>
@@ -42,26 +43,26 @@
 
         </div>
         <br><br><br>
-        <div class="main-container-sections">
-            <table>
-                <thead>
-                    <tr class="info-holder">
-                        <th>Apellidos</th>
-                        <th>Nombres</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="info-holder">
-                        <td>Guadrón Vazquez</td>
-                        <td>Francisco Javier</td>
-                        <td>
-                            Consulta General<br>
-                            <button onclick="alert('Acción ejecutada')">Ver Detalles</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="main-container">
+            <div class="main-container-sections">
+                <h2>Doctores</h2>
+            </div>
+            <br /><br /><br />
+            <div class="main-container-sections">
+                <table class="table table-bordered">
+                    <thead class="table-light">
+                        <tr class="info-holder">
+                            <th>Apellidos</th>
+                            <th>Nombres</th>
+                            <th>Area</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-doctores">
+                        <!-- Datos dinámicos -->
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </div>
@@ -76,24 +77,23 @@
                 </div>
                 <form class="formAddDoctor" id="formAddDoctor">
                     <div class="modal-body">
-                        <input type="text" class="form-control mb-2" placeholder="Nombre" aria-label="Nombre"
-                            id="nombre">
-                        <input type="text" class="form-control mb-2" placeholder="Apeliido" aria-label="Apellido"
+                        <input type="text" class="form-control mb-2" placeholder="Nombre" name="nombre" id="nombre">
+
+                        <input type="text" class="form-control mb-2" placeholder="Apellido" name="apellido"
                             id="apellido">
-                        <input type="email" class="form-control mb-2" placeholder="Correo" aria-label="Correo"
-                            id="email">
-                            <input type="text" class="form-control mb-2" placeholder="Clinica" aria-label="Clinica"
-                            id="clinica_diaria">
-                            <input type="text" class="form-control mb-2" placeholder="Area del Doctor" aria-label="Area"
+
+                        <input type="email" class="form-control mb-2" placeholder="Correo" name="email" id="email">
+
+                        <input type="text" class="form-control mb-2" placeholder="Area del Doctor" name="area_doctor"
                             id="area_doctor">
-                        <input type="password" class="form-control mb-2" placeholder="Contraseña"
-                            aria-label="Contraseña" id="password">
+
+                        <input type="password" class="form-control mb-2" placeholder="Contraseña" name="password"
+                            id="password">
+
                         <input type="password" class="form-control mb-2" placeholder="Confirmar Contraseña"
-                            aria-label="Confirm Contraseña" id="password_confirmation">
-                        <div class="input-group mb-3">
-                            <input type="file" class="form-control" id="imagen">
-                            <label class="input-group-text" for="inputGroupFile02">Cargar Imagen</label>
-                        </div>
+                            name="password_confirmation" id="password_confirmation">
+                        <input type="file" class="form-control" name="imagen" id="imagen">
+                        <label class="input-group-text" for="inputGroupFile02">Cargar Imagen</label>
                     </div>
 
                     <div class="modal-footer">
@@ -104,6 +104,51 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Modal para actualizar -->
+    <div class="modal fade" id="doctorModal" tabindex="-1" aria-labelledby="doctorModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="doctorModal">Editar Doctor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="doctorActForm">
+                        <div class="mb-3">
+                            <label for="nombreDoc" class="form-label">Nombre del Doctor</label>
+                            <input type="text" class="form-control" id="nombreDoc" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="apellidoDoc" class="form-label">Apellido del doctor</label>
+                            <input type="text" class="form-control" id="apellidoDoc" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="areaDoc" class="form-label">Area del doctor</label>
+                            <input type="text" class="form-control" id="areaDoc" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailDoc" class="form-label">Email del doctor</label>
+                            <input type="email" class="form-control" id="emailDoc" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="passDoc" class="form-label">Contraseña del Doctor</label>
+                            <input type="pass" class="form-control" id="passDoc" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="imagenDoc" class="form-label">imagen del doctor</label>
+                            <input type="file" class="form-control" id="imagenDoc" readonly />
+                        </div>
+                        <input type="hidden" id="doctorId" />
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="editDoctor()">Guardar Cambios</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="../js/dashAdmin.js"></script>

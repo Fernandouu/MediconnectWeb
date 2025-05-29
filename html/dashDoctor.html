@@ -23,6 +23,7 @@
             <div class="sidebar-sections-user">
                 <span id="UserName">Doctor</span>
                 <p>Doctor</p>
+                <a onclick="logoutAdminDoctor()">Cerrar Sesión</a>
             </div>
         </div>
     </div>
@@ -57,7 +58,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="examForm">
+                    <form id="editForm">
                         <div class="mb-3">
                             <label for="examTitle" class="form-label">Título del Examen</label>
                             <input type="text" class="form-control" id="examTitle" required />
@@ -82,7 +83,7 @@
 
     <!-- JS -->
     <script src="../js/dashDoctor.js"></script>
-    <script src ="../js/dashAdmin.js"></script>
+    <script src="../js/public/utils.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

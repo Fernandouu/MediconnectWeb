@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('http://127.0.0.1:8000/api/paciente')  
+
+     const user = JSON.parse(sessionStorage.getItem("user"));
+
+    if (user && user.nombre) {
+        document.getElementById("UserName").textContent = user.nombre;
+    } else {
+        window.location.href = "logInAdmin.html";
+    }
+    fetch('http://127.0.0.1:8000/api/paciente')
         .then(response => response.json())
         .then(data => {
             const tabla = document.getElementById('tabla-pacientes');
@@ -12,11 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td>${paciente.apellido}</td>
                 <td>${paciente.nombre}</td>
                 <td>
-                  <button class="btn btn-primary btn-sm" onclick="abrirModal(${paciente.id})">
+                <button class="btn btn-primary btn-sm" onclick="abrirModal(${paciente.id})">
                     Agregar Examen
-                  </button>
+                </button>
                 </td>
-              `;
+                `;
                     tabla.appendChild(fila);
                 });
             } else {
@@ -70,3 +78,4 @@ function saveExam() {
             alert(error.message || 'Error al guardar');
         });
 }
+
